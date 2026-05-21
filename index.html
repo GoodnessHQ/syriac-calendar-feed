@@ -5,53 +5,198 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Syriac Liturgical Calendar Feeds</title>
     <style>
-      body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 2rem auto; max-width: 52rem; padding: 0 1rem; line-height: 1.5; }
-      table { border-collapse: collapse; width: 100%; }
-      th, td { border-bottom: 1px solid #d0d7de; padding: 0.75rem; text-align: left; }
-      code { font-family: ui-monospace, SFMono-Regular, monospace; }
+      :root { color-scheme: light dark; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        margin: 0;
+        background: #f6f8fb;
+        color: #17202a;
+      }
+      main {
+        margin: 2rem auto;
+        max-width: 64rem;
+        padding: 0 1rem 3rem;
+      }
+      .hero {
+        background: linear-gradient(135deg, #101828, #1d3557);
+        color: #f8fafc;
+        border-radius: 1.25rem;
+        padding: 1.5rem;
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+      }
+      .hero h1 {
+        margin: 0 0 0.5rem;
+        font-size: clamp(1.9rem, 4vw, 2.7rem);
+      }
+      .hero p {
+        margin: 0.5rem 0 0;
+        max-width: 42rem;
+      }
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 1rem;
+      }
+      .meta-item {
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 999px;
+        padding: 0.45rem 0.8rem;
+        font-size: 0.95rem;
+      }
+      .panel {
+        margin-top: 1.5rem;
+        background: #ffffff;
+        border: 1px solid #d8e0ea;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      }
+      .panel-header {
+        padding: 1rem 1.25rem;
+        border-bottom: 1px solid #e5ebf2;
+      }
+      .panel-header h2 {
+        margin: 0;
+        font-size: 1.15rem;
+      }
+      .panel-header p {
+        margin: 0.35rem 0 0;
+        color: #526071;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th, td {
+        border-bottom: 1px solid #e5ebf2;
+        padding: 1rem 1.25rem;
+        text-align: left;
+        vertical-align: top;
+      }
+      tbody tr:last-child th,
+      tbody tr:last-child td {
+        border-bottom: 0;
+      }
+      code {
+        font-family: ui-monospace, SFMono-Regular, monospace;
+      }
+      .locale-name {
+        font-weight: 600;
+      }
+      .locale-code {
+        margin-top: 0.25rem;
+        color: #526071;
+      }
+      .button {
+        display: inline-block;
+        border-radius: 999px;
+        border: 1px solid #c9d3e0;
+        padding: 0.5rem 0.9rem;
+        text-decoration: none;
+        color: inherit;
+        font-weight: 600;
+        background: #f8fbff;
+      }
+      .button-primary {
+        background: #0f62fe;
+        border-color: #0f62fe;
+        color: #ffffff;
+      }
+      .hint {
+        margin-top: 0.4rem;
+        font-size: 0.9rem;
+        color: #526071;
+      }
+      .footer-note {
+        margin-top: 1rem;
+        color: #526071;
+        font-size: 0.95rem;
+      }
+      @media (max-width: 720px) {
+        th, td {
+          display: block;
+          width: auto;
+        }
+        thead {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+          clip: rect(0 0 0 0);
+        }
+      }
     </style>
   </head>
   <body>
     <main>
-      <h1>Syriac Liturgical Calendar Feeds</h1>
-      <p>Rolling feed coverage: <strong>2026-2031</strong></p>
-      <p>Last generated: <time datetime="2026-05-21T10:23:32.525Z">2026-05-21T10:23:32.525Z</time></p>
-      <table>
-        <thead>
-          <tr>
-            <th>Locale</th>
-            <th>Code</th>
-            <th>Subscribe</th>
-            <th>Download</th>
-          </tr>
-        </thead>
-        <tbody>
+      <section class="hero">
+        <h1>Syriac Liturgical Calendar Feeds</h1>
+        <p>Subscribe in Apple Calendar, Google Calendar, or Outlook with the locale feed of your choice.</p>
+        <p>Use Subscribe for ongoing updates or Download for a one-time import.</p>
+        <div class="meta">
+          <div class="meta-item">Rolling feed coverage: <strong>2026-2031</strong></div>
+          <div class="meta-item">Last generated: <time datetime="2026-05-21T10:26:52.320Z">2026-05-21T10:26:52.320Z</time></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Available calendar feeds</h2>
+          <p>Each feed is a rolling 6-year feed covering the current year and the next five years.</p>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Locale</th>
+              <th>Coverage</th>
+              <th>Subscribe</th>
+              <th>Download</th>
+            </tr>
+          </thead>
+          <tbody>
         <tr>
-          <th scope="row">English</th>
-          <td><code>en</code></td>
-          <td><a href="webcal://goodnesshq.github.io/syriac-calendar-feed/en.ics">Subscribe</a></td>
-          <td><a href="https://goodnesshq.github.io/syriac-calendar-feed/en.ics">Download .ics</a></td>
+          <th scope="row">
+            <div class="locale-name">English</div>
+            <div class="locale-code"><code>en</code></div>
+          </th>
+          <td>Rolling 6-year feed</td>
+          <td><a class="button button-primary" href="webcal://goodnesshq.github.io/syriac-calendar-feed/en.ics">Subscribe</a><div class="hint">Recommended</div></td>
+          <td><a class="button" href="https://goodnesshq.github.io/syriac-calendar-feed/en.ics">Download .ics</a></td>
         </tr>
         <tr>
-          <th scope="row">Dutch</th>
-          <td><code>nl</code></td>
-          <td><a href="webcal://goodnesshq.github.io/syriac-calendar-feed/nl.ics">Subscribe</a></td>
-          <td><a href="https://goodnesshq.github.io/syriac-calendar-feed/nl.ics">Download .ics</a></td>
+          <th scope="row">
+            <div class="locale-name">Dutch</div>
+            <div class="locale-code"><code>nl</code></div>
+          </th>
+          <td>Rolling 6-year feed</td>
+          <td><a class="button button-primary" href="webcal://goodnesshq.github.io/syriac-calendar-feed/nl.ics">Subscribe</a><div class="hint">Recommended</div></td>
+          <td><a class="button" href="https://goodnesshq.github.io/syriac-calendar-feed/nl.ics">Download .ics</a></td>
         </tr>
         <tr>
-          <th scope="row">Syriac</th>
-          <td><code>syc</code></td>
-          <td><a href="webcal://goodnesshq.github.io/syriac-calendar-feed/syc.ics">Subscribe</a></td>
-          <td><a href="https://goodnesshq.github.io/syriac-calendar-feed/syc.ics">Download .ics</a></td>
+          <th scope="row">
+            <div class="locale-name">Syriac</div>
+            <div class="locale-code"><code>syc</code></div>
+          </th>
+          <td>Rolling 6-year feed</td>
+          <td><a class="button button-primary" href="webcal://goodnesshq.github.io/syriac-calendar-feed/syc.ics">Subscribe</a><div class="hint">Recommended</div></td>
+          <td><a class="button" href="https://goodnesshq.github.io/syriac-calendar-feed/syc.ics">Download .ics</a></td>
         </tr>
         <tr>
-          <th scope="row">Syriac (Latin transliteration)</th>
-          <td><code>syc-Latn</code></td>
-          <td><a href="webcal://goodnesshq.github.io/syriac-calendar-feed/syc-Latn.ics">Subscribe</a></td>
-          <td><a href="https://goodnesshq.github.io/syriac-calendar-feed/syc-Latn.ics">Download .ics</a></td>
+          <th scope="row">
+            <div class="locale-name">Syriac (Latin transliteration)</div>
+            <div class="locale-code"><code>syc-Latn</code></div>
+          </th>
+          <td>Rolling 6-year feed</td>
+          <td><a class="button button-primary" href="webcal://goodnesshq.github.io/syriac-calendar-feed/syc-Latn.ics">Subscribe</a><div class="hint">Recommended</div></td>
+          <td><a class="button" href="https://goodnesshq.github.io/syriac-calendar-feed/syc-Latn.ics">Download .ics</a></td>
         </tr>
-        </tbody>
-      </table>
+          </tbody>
+        </table>
+      </section>
+
+      <p class="footer-note">If your calendar app asks for a URL, use the Subscribe link for the locale you want.</p>
     </main>
   </body>
 </html>
