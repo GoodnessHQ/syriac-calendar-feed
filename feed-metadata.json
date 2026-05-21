@@ -1,0 +1,23 @@
+{
+  "startYear": 2026,
+  "endYear": 2031,
+  "generatedAt": "2026-05-21T10:20:02.353Z",
+  "locales": [
+    {
+      "locale": "en",
+      "label": "English"
+    },
+    {
+      "locale": "nl",
+      "label": "Dutch"
+    },
+    {
+      "locale": "syc",
+      "label": "Syriac"
+    },
+    {
+      "locale": "syc-Latn",
+      "label": "Syriac (Latin transliteration)"
+    }
+  ]
+}
