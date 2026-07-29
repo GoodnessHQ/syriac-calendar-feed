@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Syriac Liturgical Calendar Feedback</title>
+    <style>
+      :root { color-scheme: light; }
+      body { margin: 0; background: #f6f8fb; color: #17202a; font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      main { max-width: 44rem; margin: 0 auto; padding: 2rem 1rem 3rem; }
+      h1 { margin: 0; font-size: clamp(1.9rem, 5vw, 2.5rem); }
+      .intro, form { margin-top: 1.5rem; padding: 1.5rem; background: #fff; border: 1px solid #d8e0ea; border-radius: 1rem; box-shadow: 0 12px 30px rgba(15, 23, 42, .08); }
+      .intro p { margin: .5rem 0 0; }
+      .field { margin-top: 1.25rem; }
+      label { display: block; margin-bottom: .4rem; font-weight: 700; }
+      .hint { margin: 0 0 .45rem; color: #526071; font-size: .95rem; }
+      input, select, textarea, button { box-sizing: border-box; width: 100%; min-height: 44px; font: inherit; }
+      input, select, textarea { padding: .65rem .75rem; color: inherit; background: #fff; border: 1px solid #8b9aad; border-radius: .5rem; }
+      textarea { min-height: 7rem; resize: vertical; }
+      input:focus, select:focus, textarea:focus, button:focus { outline: 3px solid #0f62fe; outline-offset: 2px; }
+      button { margin-top: 1.5rem; border: 1px solid #0f62fe; border-radius: .5rem; color: #fff; background: #0f62fe; font-weight: 700; cursor: pointer; }
+      button:hover { background: #084ec4; }
+      .required { color: #a20a0a; }
+      #error { margin-top: 1rem; padding: .8rem; border: 1px solid #a20a0a; border-radius: .5rem; color: #7a0000; background: #fff4f4; }
+      [hidden] { display: none; }
+      a { color: #084ec4; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Syriac Liturgical Calendar Feedback</h1>
+      <section class="intro">
+        <p>Please report one correction at a time. Copy the date and event name exactly as they appear in your calendar.</p>
+        <p>Submitting opens GitHub to send the report. A free GitHub account is required only at that final step.</p>
+      </section>
+      <form id="feedback-form" novalidate>
+        <div class="field">
+          <label for="locale">Which calendar are you reviewing? <span class="required">Required</span></label>
+          <select id="locale" name="locale" required>
+            <option value="">Choose a calendar</option>
+            <option value="en">English</option>
+            <option value="nl">Dutch</option>
+            <option value="syc">Syriac</option>
+            <option value="syc-Latn">Syriac transliteration</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="date">What date is affected? <span class="required">Required</span></label>
+          <input id="date" name="date" type="date" required>
+          <p class="hint">For a missing event, use the date on which it should appear.</p>
+        </div>
+        <div class="field">
+          <label for="event-name">What event name do you see? <span class="required">Required</span></label>
+          <input id="event-name" name="event-name" maxlength="300" required>
+          <p class="hint">Copy it exactly. Enter "Missing event" when no event appears.</p>
+        </div>
+        <div class="field">
+          <label for="type">What is the problem? <span class="required">Required</span></label>
+          <select id="type" name="type" required>
+            <option value="">Choose a problem</option>
+            <option>Wrong date</option>
+            <option>Wrong title</option>
+            <option>Missing event</option>
+            <option>Extra event</option>
+            <option>Wrong reading</option>
+            <option>Wrong fast</option>
+            <option>Typo</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="correction">What should it say or be instead? <span class="required">Required</span></label>
+          <textarea id="correction" name="correction" maxlength="2000" required></textarea>
+          <p class="hint">For a wrong date, use YYYY-MM-DD.</p>
+        </div>
+        <div class="field">
+          <label for="source">What is the source? <span class="required">Required</span></label>
+          <textarea id="source" name="source" maxlength="2000" required></textarea>
+          <p class="hint">Give a source title, page number, URL, or exact authoritative wording.</p>
+        </div>
+        <div id="error" role="alert" hidden></div>
+        <button type="submit">Continue to send feedback</button>
+      </form>
+    </main>
+    <script>
+      const form = document.querySelector('#feedback-form');
+      const error = document.querySelector('#error');
+      const localeNames = { en: 'English', nl: 'Dutch', syc: 'Syriac', 'syc-Latn': 'Syriac transliteration' };
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        error.hidden = true;
+
+        if (!form.checkValidity()) {
+          error.textContent = 'Please complete every required field.';
+          error.hidden = false;
+          form.reportValidity();
+          return;
+        }
+
+        const values = Object.fromEntries(new FormData(form));
+        const eventName = values['event-name'].trim();
+
+        if ((values.type === 'Missing event') !== (eventName === 'Missing event')) {
+          error.textContent = 'Use "Missing event" as the event name only when the problem is Missing event.';
+        } else if (values.type === 'Wrong date' && !/^\d{4}-\d{2}-\d{2}$/.test(values.correction.trim())) {
+          error.textContent = 'For a wrong date, enter the correction as YYYY-MM-DD.';
+        } else {
+          const feedback = {
+            format: 'syriac-calendar-feedback/v1',
+            locale: values.locale,
+            date: values.date,
+            eventName,
+            type: values.type,
+            correction: values.correction.trim(),
+            source: values.source.trim(),
+          };
+          const body = '<!-- syriac-calendar-feedback/v1 -->\n```json\n' + JSON.stringify(feedback, null, 2) + '\n```';
+          const params = new URLSearchParams({
+            title: '[Feedback] ' + values.type + ': ' + values.date,
+            labels: 'feedback',
+            body,
+          });
+          window.location.assign('https://github.com/GoodnessHQ/syriac-calendar-feed/issues/new?' + params);
+          return;
+        }
+
+        error.hidden = false;
+      });
+    </script>
+  </body>
+</html>
