@@ -73,9 +73,9 @@
           <p class="hint">For a wrong date, use YYYY-MM-DD.</p>
         </div>
         <div class="field">
-          <label for="source">What is the source? <span class="required">Required</span></label>
-          <textarea id="source" name="source" maxlength="2000" required></textarea>
-          <p class="hint">Give a source title, page number, URL, or exact authoritative wording.</p>
+          <label for="source">What is the source?</label>
+          <textarea id="source" name="source" maxlength="2000"></textarea>
+          <p class="hint">Optional: source title, page number, URL, or exact authoritative wording.</p>
         </div>
         <div id="error" role="alert" hidden></div>
         <button type="submit">Continue to send feedback</button>
@@ -112,7 +112,7 @@
             eventName,
             type: values.type,
             correction: values.correction.trim(),
-            source: values.source.trim(),
+            source: values.source.trim() || null,
           };
           const body = '<!-- syriac-calendar-feedback/v1 -->\n```json\n' + JSON.stringify(feedback, null, 2) + '\n```';
           const params = new URLSearchParams({
