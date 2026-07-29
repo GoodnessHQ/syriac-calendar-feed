@@ -1,23 +1,37 @@
 {
   "startYear": 2026,
   "endYear": 2031,
-  "generatedAt": "2026-07-29T10:52:31.434Z",
+  "generatedAt": "2026-07-29T15:00:44.273Z",
   "locales": [
     {
       "locale": "en",
-      "label": "English"
+      "label": "English",
+      "fileName": "en.ics",
+      "downloadUrl": "https://goodnesshq.github.io/syriac-calendar-feed/en.ics"
+    },
+    {
+      "locale": "sv",
+      "label": "Swedish",
+      "fileName": "sv.ics",
+      "downloadUrl": "https://goodnesshq.github.io/syriac-calendar-feed/sv.ics"
     },
     {
       "locale": "nl",
-      "label": "Dutch"
+      "label": "Dutch",
+      "fileName": "nl.ics",
+      "downloadUrl": "https://goodnesshq.github.io/syriac-calendar-feed/nl.ics"
     },
     {
       "locale": "syc",
-      "label": "Syriac"
+      "label": "Syriac",
+      "fileName": "syc.ics",
+      "downloadUrl": "https://goodnesshq.github.io/syriac-calendar-feed/syc.ics"
     },
     {
       "locale": "syc-Latn",
-      "label": "Syriac (Latin transliteration)"
+      "label": "Syriac (Latin transliteration)",
+      "fileName": "syc-Latn.ics",
+      "downloadUrl": "https://goodnesshq.github.io/syriac-calendar-feed/syc-Latn.ics"
     }
   ]
 }

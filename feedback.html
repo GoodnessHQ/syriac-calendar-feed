@@ -39,6 +39,7 @@
           <select id="locale" name="locale" required>
             <option value="">Choose a calendar</option>
             <option value="en">English</option>
+            <option value="sv">Swedish</option>
             <option value="nl">Dutch</option>
             <option value="syc">Syriac</option>
             <option value="syc-Latn">Syriac transliteration</option>
@@ -84,7 +85,7 @@
     <script>
       const form = document.querySelector('#feedback-form');
       const error = document.querySelector('#error');
-      const localeNames = { en: 'English', nl: 'Dutch', syc: 'Syriac', 'syc-Latn': 'Syriac transliteration' };
+      const localeNames = { en: 'English', sv: 'Swedish', nl: 'Dutch', syc: 'Syriac', 'syc-Latn': 'Syriac transliteration' };
 
       form.addEventListener('submit', (event) => {
         event.preventDefault();
