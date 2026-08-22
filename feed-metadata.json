@@ -1,37 +1,37 @@
 {
   "startYear": 2026,
   "endYear": 2031,
-  "generatedAt": "2026-08-22T13:42:52.116Z",
+  "generatedAt": "2026-08-22T13:56:53.084Z",
   "locales": [
     {
       "locale": "en",
       "label": "English",
       "fileName": "en.ics",
-      "downloadUrl": "https://goodnesshq.github.io/syriac-calendar-feed/en.ics"
+      "downloadUrl": "https://raw.githubusercontent.com/GoodnessHQ/syriac-calendar-feed/feature/refresh-openspec-and-remove-legacy-source/en.ics"
     },
     {
       "locale": "sv",
       "label": "Swedish",
       "fileName": "sv.ics",
-      "downloadUrl": "https://goodnesshq.github.io/syriac-calendar-feed/sv.ics"
+      "downloadUrl": "https://raw.githubusercontent.com/GoodnessHQ/syriac-calendar-feed/feature/refresh-openspec-and-remove-legacy-source/sv.ics"
     },
     {
       "locale": "nl",
       "label": "Dutch",
       "fileName": "nl.ics",
-      "downloadUrl": "https://goodnesshq.github.io/syriac-calendar-feed/nl.ics"
+      "downloadUrl": "https://raw.githubusercontent.com/GoodnessHQ/syriac-calendar-feed/feature/refresh-openspec-and-remove-legacy-source/nl.ics"
     },
     {
       "locale": "syc",
       "label": "Syriac",
       "fileName": "syc.ics",
-      "downloadUrl": "https://goodnesshq.github.io/syriac-calendar-feed/syc.ics"
+      "downloadUrl": "https://raw.githubusercontent.com/GoodnessHQ/syriac-calendar-feed/feature/refresh-openspec-and-remove-legacy-source/syc.ics"
     },
     {
       "locale": "syc-Latn",
       "label": "Syriac (Latin transliteration)",
       "fileName": "syc-Latn.ics",
-      "downloadUrl": "https://goodnesshq.github.io/syriac-calendar-feed/syc-Latn.ics"
+      "downloadUrl": "https://raw.githubusercontent.com/GoodnessHQ/syriac-calendar-feed/feature/refresh-openspec-and-remove-legacy-source/syc-Latn.ics"
     }
   ]
 }
