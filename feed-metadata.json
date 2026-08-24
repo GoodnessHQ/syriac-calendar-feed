@@ -1,37 +1,37 @@
 {
   "startYear": 2026,
   "endYear": 2031,
-  "generatedAt": "2026-08-24T22:08:36.742Z",
+  "generatedAt": "2026-08-24T22:34:52.128Z",
   "locales": [
     {
       "locale": "en",
       "label": "English",
       "fileName": "en.ics",
-      "downloadUrl": "https://syriacorthodox.github.io/syriac-calendar-feed/en.ics"
+      "downloadUrl": "https://raw.githubusercontent.com/SyriacOrthodox/syriac-calendar-feed/feature/add-final-general-sunday-hymns/en.ics"
     },
     {
       "locale": "sv",
       "label": "Swedish",
       "fileName": "sv.ics",
-      "downloadUrl": "https://syriacorthodox.github.io/syriac-calendar-feed/sv.ics"
+      "downloadUrl": "https://raw.githubusercontent.com/SyriacOrthodox/syriac-calendar-feed/feature/add-final-general-sunday-hymns/sv.ics"
     },
     {
       "locale": "nl",
       "label": "Dutch",
       "fileName": "nl.ics",
-      "downloadUrl": "https://syriacorthodox.github.io/syriac-calendar-feed/nl.ics"
+      "downloadUrl": "https://raw.githubusercontent.com/SyriacOrthodox/syriac-calendar-feed/feature/add-final-general-sunday-hymns/nl.ics"
     },
     {
       "locale": "syc",
       "label": "Syriac",
       "fileName": "syc.ics",
-      "downloadUrl": "https://syriacorthodox.github.io/syriac-calendar-feed/syc.ics"
+      "downloadUrl": "https://raw.githubusercontent.com/SyriacOrthodox/syriac-calendar-feed/feature/add-final-general-sunday-hymns/syc.ics"
     },
     {
       "locale": "syc-Latn",
       "label": "Syriac (Latin transliteration)",
       "fileName": "syc-Latn.ics",
-      "downloadUrl": "https://syriacorthodox.github.io/syriac-calendar-feed/syc-Latn.ics"
+      "downloadUrl": "https://raw.githubusercontent.com/SyriacOrthodox/syriac-calendar-feed/feature/add-final-general-sunday-hymns/syc-Latn.ics"
     }
   ]
 }
