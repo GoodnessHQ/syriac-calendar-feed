@@ -1,37 +1,37 @@
 {
   "startYear": 2026,
   "endYear": 2031,
-  "generatedAt": "2026-08-22T14:03:08.112Z",
+  "generatedAt": "2026-08-24T22:08:36.742Z",
   "locales": [
     {
       "locale": "en",
       "label": "English",
       "fileName": "en.ics",
-      "downloadUrl": "https://goodnesshq.github.io/syriac-calendar-feed/en.ics"
+      "downloadUrl": "https://syriacorthodox.github.io/syriac-calendar-feed/en.ics"
     },
     {
       "locale": "sv",
       "label": "Swedish",
       "fileName": "sv.ics",
-      "downloadUrl": "https://goodnesshq.github.io/syriac-calendar-feed/sv.ics"
+      "downloadUrl": "https://syriacorthodox.github.io/syriac-calendar-feed/sv.ics"
     },
     {
       "locale": "nl",
       "label": "Dutch",
       "fileName": "nl.ics",
-      "downloadUrl": "https://goodnesshq.github.io/syriac-calendar-feed/nl.ics"
+      "downloadUrl": "https://syriacorthodox.github.io/syriac-calendar-feed/nl.ics"
     },
     {
       "locale": "syc",
       "label": "Syriac",
       "fileName": "syc.ics",
-      "downloadUrl": "https://goodnesshq.github.io/syriac-calendar-feed/syc.ics"
+      "downloadUrl": "https://syriacorthodox.github.io/syriac-calendar-feed/syc.ics"
     },
     {
       "locale": "syc-Latn",
       "label": "Syriac (Latin transliteration)",
       "fileName": "syc-Latn.ics",
-      "downloadUrl": "https://goodnesshq.github.io/syriac-calendar-feed/syc-Latn.ics"
+      "downloadUrl": "https://syriacorthodox.github.io/syriac-calendar-feed/syc-Latn.ics"
     }
   ]
 }
