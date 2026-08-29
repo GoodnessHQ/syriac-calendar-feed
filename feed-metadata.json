@@ -1,37 +1,37 @@
 {
   "startYear": 2026,
   "endYear": 2031,
-  "generatedAt": "2026-08-29T08:28:55.720Z",
+  "generatedAt": "2026-08-29T16:24:41.985Z",
   "locales": [
     {
       "locale": "en",
       "label": "English",
       "fileName": "en.ics",
-      "downloadUrl": "https://syriacorthodox.github.io/syriac-calendar-feed/en.ics"
+      "downloadUrl": "https://raw.githubusercontent.com/SyriacOrthodox/syriac-calendar-feed/feature/add-qdom-and-zuyoho-hymns/en.ics"
     },
     {
       "locale": "sv",
       "label": "Swedish",
       "fileName": "sv.ics",
-      "downloadUrl": "https://syriacorthodox.github.io/syriac-calendar-feed/sv.ics"
+      "downloadUrl": "https://raw.githubusercontent.com/SyriacOrthodox/syriac-calendar-feed/feature/add-qdom-and-zuyoho-hymns/sv.ics"
     },
     {
       "locale": "nl",
       "label": "Dutch",
       "fileName": "nl.ics",
-      "downloadUrl": "https://syriacorthodox.github.io/syriac-calendar-feed/nl.ics"
+      "downloadUrl": "https://raw.githubusercontent.com/SyriacOrthodox/syriac-calendar-feed/feature/add-qdom-and-zuyoho-hymns/nl.ics"
     },
     {
       "locale": "syc",
       "label": "Syriac",
       "fileName": "syc.ics",
-      "downloadUrl": "https://syriacorthodox.github.io/syriac-calendar-feed/syc.ics"
+      "downloadUrl": "https://raw.githubusercontent.com/SyriacOrthodox/syriac-calendar-feed/feature/add-qdom-and-zuyoho-hymns/syc.ics"
     },
     {
       "locale": "syc-Latn",
       "label": "Syriac (Latin transliteration)",
       "fileName": "syc-Latn.ics",
-      "downloadUrl": "https://syriacorthodox.github.io/syriac-calendar-feed/syc-Latn.ics"
+      "downloadUrl": "https://raw.githubusercontent.com/SyriacOrthodox/syriac-calendar-feed/feature/add-qdom-and-zuyoho-hymns/syc-Latn.ics"
     }
   ]
 }
